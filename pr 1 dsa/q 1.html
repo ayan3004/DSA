@@ -1,0 +1,83 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let price = [7,1,5,3,4,8]
+    let maxprofit = 0
+    function max(price){
+        for(let i = 0 ; i < price.length; i++){
+            if(price[i]> maxprofit){
+                maxprofit = price[i]-i-1
+            }
+        }
+        console.log(maxprofit);
+    }
+    max(price);
+    console.log(price);
+
+    
+    function min(price){
+        for(let i = 0 ; i < price.length; i++){
+            if(price[i]< maxprofit){
+                maxprofit = price[i]
+            }
+        }
+        console.log(maxprofit);
+    }
+    min(price);
+    
+
+    // function profit(price , price2){
+    //     let pro = max(price) 
+    //     let fit = min(price2 , price)
+    //      let profit1 = pro - fit
+    //      console.log(profit1)
+    // }
+    // profit(price , price2)
+</script> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let Profit = 0;
+    let prices=[7,1,5,3,6,4]
+
+for (let i = 0; i < prices.length - 1; i++) {
+    for (let j =i+1; j < prices.length; j++) {
+        let pro = prices[j] - prices[i];
+        if (pro > Profit){
+            Profit = pro;
+            
+        }
+    }
+}
+console.log(Profit)
+
+let Profit2 = 0; 
+    let prices2 = [ 7 , 6 , 4 , 3 , 1 ]
+    for (let i = 0 ; i < prices2.length - 1; i++){
+        for (let j = i + 1; j > prices2.length; j++){
+            let pro2 = prices2[j] - prices2[i];
+            if (pro2 > Profit2){
+                Profit2 = pro2;
+            }
+        }
+    }
+console.log(Profit2)
+</script>
