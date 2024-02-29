@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function Node(value){
+        this.value = value
+        this.next = null
+    }
+     
+     const Node1 = new Node(200)
+     const Node2 = new Node(30)
+     const Node3 = new Node(45)
+     const Node4 = new Node(3)
+     const Node5 = new Node(25)
+      
+      Node1.next=Node2
+      Node2.next=Node3
+      Node3.next=Node4
+      Node4.next=Node5
+
+      let list =Node1
+    let n = 2
+    let length = 5
+    
+    function Remove(lists,remove,totalnode){
+        let n = remove
+        let cout1 = totalnode
+        let step = lists
+        while(step != null)
+        {
+            if(cout1 === n)
+            {
+                step = step.next
+            }
+            else
+            {
+                console.log(step.node)
+                step = step.next
+            }
+            cout1--
+        }
+    }
+
+    Remove(list , n , length)
+
+
+</script>
