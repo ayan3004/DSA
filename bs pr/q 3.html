@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let arr =  [3,3]
+    let target = 6
+
+    function bs(arr,target){
+        let sum=0
+        let arr_1=[]
+        for(let i=0;i<arr.length;i++){
+                if(sum == target){
+                    break
+                }else{
+                    sum+=arr[i]
+                    arr_1.push(i)
+                }
+        }
+
+        return arr_1   
+    }
+    console.log(bs(arr,target))
+</script>
