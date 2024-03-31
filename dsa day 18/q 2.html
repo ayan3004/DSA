@@ -10,11 +10,19 @@
 </body>
 </html>
 <script>
-    let a = 0;
-    for(i = 0 ; i < N ; i++){
-        for (j = N ;j > i;  j-- ){
-            a =a + i+j
+    let arr = [[1,2,3],
+            [4,5,6],
+               [7,8,9]]
+   
+  let ans = []
+    for(let i = 0; i<arr.length;i++){
+        
+              for(let j = 0; j<arr[i].length;j++){
+       if(i==j){
+        ans.push(arr[i][j])  
+       }
         }
+           
     }
-    // time complexity = n2
+    console.log(ans)
 </script>
