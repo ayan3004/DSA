@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function quicksort(arr){
+if(arr.length <=1){
+    return arr
+}
+const pivot = arr[0]
+const right = []
+const left = []
+for(let i =1 ; i<arr.length;i++){
+    if(arr[i]>pivot){
+          right.push(arr[i])
+    }else{
+        left.push(arr[i])
+    }
+}
+return [...quicksort(right),pivot,...quicksort(left)]
+    }
+    console.log(quicksort([3,5,6,1,2,8,9,14]))
+</script>
